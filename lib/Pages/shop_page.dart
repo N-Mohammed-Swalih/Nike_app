@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sneakers_app/components/shoe_tile.dart';
+import 'package:sneakers_app/models/shoe.dart';
 
 class ShopPage extends StatefulWidget {
   const ShopPage({super.key});
@@ -45,9 +47,10 @@ class _ShopPageState extends State<ShopPage> {
           ),
           //hot picks
           const Padding(
-            padding:EdgeInsets.symmetric(horizontal: 25.0),
+            padding: EdgeInsets.symmetric(horizontal: 25.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
                   "Hot picks",
@@ -60,7 +63,18 @@ class _ShopPageState extends State<ShopPage> {
                 )
               ],
             ),
-          )
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Expanded(child: ListView.builder(
+            itemBuilder: ((context, index) {
+
+              //creat a shoe
+              Shoe shoe = Shoe(name:"AirMax Pulse" , price: "3000", imagePath: "assets/shoes/airmax pulse.jpg", description: "Nike");
+              return ShoeTile(shoe: shoe);
+            }),
+          ))
         ]);
   }
 }

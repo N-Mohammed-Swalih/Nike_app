@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers_app/Pages/intro_page.dart';
+import 'package:sneakers_app/pages/intro_page.dart';
 
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: IntroPage()
-  ));
+  runApp(
+      const MaterialApp(debugShowCheckedModeBanner: false, home: IntroPage()));
 }
 
 class MyWidget extends StatelessWidget {
