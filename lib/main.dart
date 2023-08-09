@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:sneakers_app/models/cart.dart';
 import 'package:sneakers_app/pages/intro_page.dart';
 
 void main() {
-  runApp(
-      const MaterialApp(debugShowCheckedModeBanner: false, home: IntroPage()));
+  runApp(const MyApp());
 }
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return ChangeNotifierProvider(
+      create: (context) => Cart(),
+      builder: (context, child) => const MaterialApp(
+          debugShowCheckedModeBanner: false, home: IntroPage()),
+    );
   }
 }

@@ -54,35 +54,34 @@ class IntroPage extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              //start button 
+              //start button
               Container(
-                  height: 70,
-                  width: MediaQuery.of(context).size.width,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
+                height: 70,
+                width: MediaQuery.of(context).size.width,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    onPressed: () {
-                      Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: ((context) => const HomePage()),
-                    ));
-                    },
-  
-                    child: Text(
-                      "Shop Now!",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                      ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: ((context) => const HomePage()),
+                        ));
+                  },
+                  child: Text(
+                    "Shop Now!",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
+              ),
             ],
           ),
         ),
