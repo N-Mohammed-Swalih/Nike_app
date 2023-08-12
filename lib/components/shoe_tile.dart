@@ -4,8 +4,9 @@ import '../models/shoe.dart';
 
 class ShoeTile extends StatelessWidget {
   Shoe shoe;
+  void Function()? onTap;
 
-  ShoeTile({super.key, required this.shoe});
+  ShoeTile({super.key, required this.shoe, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +21,20 @@ class ShoeTile extends StatelessWidget {
             //shoe images
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.asset(shoe.imagePath,
-              height: 277.2,),
+              child: Image.asset(
+                shoe.imagePath,
+                height: 277.2,
+              ),
             ),
 
             //description
-           Padding(
-             padding: const EdgeInsets.only(top : 4.0),
-             child: Text(
-                  shoe.description,
-                  style: TextStyle(color: Colors.grey[700]),
-                ),
-           ),
+            Padding(
+              padding: const EdgeInsets.only(top: 4.0),
+              child: Text(
+                shoe.description,
+                style: TextStyle(color: Colors.grey[700]),
+              ),
+            ),
             //price+details
             Padding(
               padding: const EdgeInsets.only(left: 25.0),
@@ -43,7 +46,9 @@ class ShoeTile extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         //shoe name
-                        const SizedBox(height: 12,),
+                        const SizedBox(
+                          height: 12,
+                        ),
                         Text(
                           shoe.name,
                           style: TextStyle(
@@ -62,19 +67,23 @@ class ShoeTile extends StatelessWidget {
                       ]),
 
                   //plus button
-                  Container(
-                    height: 60,
-                    width: 50,
-                    padding: const EdgeInsets.only(),
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(12),
-                          bottomRight: Radius.circular(12)),
-                      color: Colors.black,
-                    ),
-                    child: const Icon(
-                      Icons.add,
-                      color: Colors.white,
+
+                  GestureDetector(
+                    onTap: onTap,
+                    child: Container(
+                      height: 60,
+                      width: 50,
+                      padding: const EdgeInsets.only(),
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(12),
+                            bottomRight: Radius.circular(12)),
+                        color: Colors.black,
+                      ),
+                      child: const Icon(
+                        Icons.add,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ],
