@@ -29,12 +29,13 @@ class _HomePageState extends State<HomePage> {
 //pages to display
 
   final List<Widget> _pages = [
+
 //shop page
      ShopPage(),
 //cart page
     const CartPage(),
 //orders page
-    const OrdersPage(),
+    const OrderPage(),
 //settings page
     const SettingsPage(),
   ];

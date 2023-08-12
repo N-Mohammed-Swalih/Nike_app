@@ -32,7 +32,8 @@ class _CartPageState extends State<CartPage> {
                   const SizedBox(
                     height: 25,
                   ),
-                  Expanded(child: ListView.builder(
+                  Expanded(
+                      child: ListView.builder(
                     itemCount: value.getUserCart().length,
                     itemBuilder: (context, index) {
                       //get individual items

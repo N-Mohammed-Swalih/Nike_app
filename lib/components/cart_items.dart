@@ -31,9 +31,22 @@ void removeItemsfromCart(){
         leading: Image.asset(widget.shoe.imagePath),
         title: Text(widget.shoe.name),
         subtitle: Text(widget.shoe.price),
-        trailing: IconButton(icon: Icon(Icons.delete),
-        onPressed: 
-          removeItemsfromCart)
+        trailing:
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(icon: Icon(Icons.shopping_cart,),onPressed : (){},
+                hoverColor: Colors.green,
+                  tooltip : "Buy Now"),
+                const SizedBox(width: 10,),
+                IconButton(icon: Icon(Icons.delete),
+                onPressed: 
+                  removeItemsfromCart,
+                  hoverColor: Colors.red,
+                  tooltip : "Remove from cart"
+                  ),
+              ],
+            ),
       )
     );
   }
