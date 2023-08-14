@@ -32,8 +32,8 @@ class BottomNavBar extends StatelessWidget {
               text: "Orders",
             ),
             GButton(
-              icon: Icons.settings,
-              text: "Settings",
+              icon: Icons.person,
+              text: "Profile",
             ),
           ]),
     );

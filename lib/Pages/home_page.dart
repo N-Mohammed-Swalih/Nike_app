@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers_app/pages/settings_page.dart';
+import 'package:sneakers_app/pages/profile_page.dart';
 import 'package:sneakers_app/pages/shop_page.dart';
 import 'package:sneakers_app/components/bottom_nav_bar.dart';
 
@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
 //orders page
     const OrderPage(),
 //settings page
-    const SettingsPage(),
+    const ProfilePage(),
   ];
 
   @override

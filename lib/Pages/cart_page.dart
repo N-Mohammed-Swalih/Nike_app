@@ -44,7 +44,30 @@ class _CartPageState extends State<CartPage> {
                         shoe: individualShoe,
                       );
                     },
-                  ))
+                  )),
+
+                  //Pay Now Button
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.black87,
+                    borderRadius: BorderRadius.circular(10)
+                  ),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black
+                      ),
+                      onPressed: () {}, child: Text("Place Order",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold
+
+                      ),),
+
+                    ),
+                  )
                 ],
               ),
             ));

@@ -13,41 +13,26 @@ class CartItem extends StatefulWidget {
 }
 
 class _CartItemState extends State<CartItem> {
-
 //remove the items from the cart
-void removeItemsfromCart(){
-  Provider.of<Cart>(context, listen:  false).removeItemsfromCart(widget.shoe);
-}
-
+  void removeItemsfromCart() {
+    Provider.of<Cart>(context, listen: false).removeItemsfromCart(widget.shoe);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Colors.black12,
-      borderRadius: BorderRadius.circular(8)),
-      margin: const EdgeInsets.only(bottom: 20),
-      
-      child: ListTile(
-        leading: Image.asset(widget.shoe.imagePath),
-        title: Text(widget.shoe.name),
-        subtitle: Text(widget.shoe.price),
-        trailing:
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                IconButton(icon: Icon(Icons.shopping_cart,),onPressed : (){},
-                hoverColor: Colors.green,
-                  tooltip : "Buy Now"),
-                const SizedBox(width: 10,),
-                IconButton(icon: Icon(Icons.delete),
-                onPressed: 
-                  removeItemsfromCart,
-                  hoverColor: Colors.red,
-                  tooltip : "Remove from cart"
-                  ),
-              ],
-            ),
-      )
-    );
+        decoration: BoxDecoration(
+            color: Colors.black12, borderRadius: BorderRadius.circular(8)),
+        margin: const EdgeInsets.only(bottom: 20),
+        child: ListTile(
+          leading: Image.asset(widget.shoe.imagePath),
+          title: Text(widget.shoe.name),
+          subtitle: Text(widget.shoe.price),
+          trailing: IconButton(
+              icon: Icon(Icons.delete),
+              onPressed: removeItemsfromCart,
+              hoverColor: Colors.red[500],
+              tooltip: "Remove from cart"),
+        ));
   }
 }
