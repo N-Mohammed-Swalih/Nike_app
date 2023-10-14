@@ -11,19 +11,21 @@ class ShoeTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.only(left: 25),
-        width: 280,
+        margin: const EdgeInsets.only(left: 20),
+        width: MediaQuery.of(context).size.width * 0.78,
         decoration: BoxDecoration(
-            color: Colors.grey[200], borderRadius: BorderRadius.circular(12)),
+            color: Colors.grey[200], borderRadius: BorderRadius.circular(10)),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             //shoe images
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.asset(
                 shoe.imagePath,
-                height: 277.2,
+                fit: BoxFit.fitWidth,
+                width: MediaQuery.of(context).size.width * 0.75,
+                height: MediaQuery.of(context).size.height * 0.31,
               ),
             ),
 

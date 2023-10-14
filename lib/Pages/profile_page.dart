@@ -50,8 +50,8 @@ class _ProfilePageState extends State<ProfilePage> {
               child: CircleAvatar(
                 backgroundImage: NetworkImage(
                     "https://i.guim.co.uk/img/media/fd9b9ed4d416bd1867fe356e49975b9527c26765/0_59_2588_1553/master/2588.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=9524bc6ee58b97a7230c38228afaecec"),
-                minRadius: 70,
-                maxRadius: 100,
+                minRadius: 50,
+                maxRadius: 70,
               ),
             ),
             SizedBox(
@@ -59,10 +59,8 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
 
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  width: 100,
-                ),
                 IconButton(
                     icon: const FaIcon(
                       FontAwesomeIcons.facebook,
@@ -71,7 +69,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     onPressed: () {}),
                 SizedBox(
-                  width: 30,
+                  width: 20,
                 ),
                 IconButton(
                     icon: const FaIcon(
@@ -81,7 +79,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     onPressed: () {}),
                 SizedBox(
-                  width: 30,
+                  width: 20,
                 ),
                 IconButton(
                     icon: const FaIcon(
@@ -91,7 +89,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     onPressed: () {}),
                 SizedBox(
-                  width: 30,
+                  width: 20,
                 ),
                 IconButton(
                     icon: const FaIcon(
