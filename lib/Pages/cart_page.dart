@@ -17,12 +17,12 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Consumer<Cart>(
         builder: (context, value, child) => Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25.0),
+              padding:const EdgeInsets.symmetric(horizontal: 25.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //heading of the page
-                  Text(
+                 const Text(
                     "My Cart",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -50,22 +50,20 @@ class _CartPageState extends State<CartPage> {
                   Container(
                     width: MediaQuery.of(context).size.width,
                     height: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.black87,
-                    borderRadius: BorderRadius.circular(10)
-                  ),
+                    decoration: BoxDecoration(
+                        color: Colors.black87,
+                        borderRadius: BorderRadius.circular(10)),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.black
+                          backgroundColor: Colors.black),
+                      onPressed: () {},
+                      child:const Text(
+                        "Place Order",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
                       ),
-                      onPressed: () {}, child: Text("Place Order",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold
-
-                      ),),
-
                     ),
                   )
                 ],
